@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.page_title }}</title>
+</head>
+<body>
+    <h1>Welcome, {{ page.user_name }}!</h1>
+    <p>This page was rendered using a Django HTML template.</p>
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    {% for person in people%}   
+            <tr>
+                <td>{{person.name}}</td>
+                <td>{{person.age}}</td>
+            </tr> 
+    {%endfor%}
+        </table>
+
+</body>
+</html>
